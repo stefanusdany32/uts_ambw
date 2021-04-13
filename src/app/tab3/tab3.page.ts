@@ -45,7 +45,8 @@ export class Tab3Page {
         const imgFilePath = `imgStorage/${temp}`
         //console.log(index)
         var storage = this.afStorage.storage;
-        var gsReference =storage.refFromURL('gs://bucket/images/'+temp[index])
+        var gsReference ='https://firebasestorage.googleapis.com/v0/b/photogallery165.appspot.com/o/imgStorage%'+temp[index]
+        console.log(gsReference)
         this.urlImageStorage.unshift(gsReference)
        
       }
@@ -53,7 +54,9 @@ export class Tab3Page {
   edit(){
     console.log(this.judul)
     this.isidataCol.doc(this.judul).update({
-      isi : this.isi
+      isi : this.isi,
+      date : this.date,
+      rating : this.rating
     });
   }
   delete(){

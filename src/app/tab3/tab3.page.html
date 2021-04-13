@@ -9,6 +9,9 @@
 <ion-content [fullscreen]="true">
   
   <ion-list>
+    <ion-input placeholder="Isi" [(ngModel)]="isi"></ion-input>
+    <ion-input type="date" [(ngModel)]="date"></ion-input>
+    <ion-input type="number" placeholder="rating" [(ngModel)]="rating"></ion-input>
     <ion-button (click)="edit()">Edit</ion-button>
    <ion-button (click)="delete()">Delete</ion-button>
   <ion-item text-warp *ngFor="let data of isidata | async">
