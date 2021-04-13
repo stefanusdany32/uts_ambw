@@ -8,10 +8,12 @@
 <ion-content>
 <ion-list>
   <ion-item text-warp *ngFor="let data of isidata | async">
+    <div>
     <h1 (click)="pindah(data.judul)">Judul :{{data.judul}}</h1><br>
     <p>Isi : {{data.isi}}</p><br><br>
     <p>Tanggal : {{data.date}}</p><br>
     <p>Rating : {{data.rating}}</p><br>
+  </div>
   </ion-item>
 </ion-list>
 </ion-content>
